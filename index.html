@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baboon CREW</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="intro">
+        <img
+            src="/src/video/intro.gif"
+        ></img>
+    </div>
+    <div id="main-content"></div>
+    <header class="l-header">
+        <div class="l-header-inner">
+            <div class="l-header-inner__logo">
+                <img src="/src/icons/logo.jpg" alt="Logo">
+            </div>
+            <div class="l-header-inner__load">
+                <div class="l-header-inner__load-content">
+                    Loading <span class="js-scroll-percent">0%</span>
+                </div>
+            </div>
+            <div class="l-header-inner__nav">
+                <a href="#section-1" class="l-header-inner__nav-item">
+                    Team
+                </a>
+                <a href="#section-2" class="l-header-inner__nav-item">
+                    About US
+                </a>
+                <a href="#section-3" class="l-header-inner__nav-item">
+                    Activities
+                </a>
+                <a href="#section-4" class="l-header-inner__nav-item">
+                    Contact
+                </a>
+            </div>
+        </div>
+    </header>
+    <main class="l-main">
+        <div class="l-kv" id="vanta-bg">
+            <div class="l-kv__inner">
+                <div class="l-content">
+                    <div class="l-kv__inner-slogan">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto ea facilis odio ratione sunt,
+                        omnis blanditiis id atque laborum totam? Quos doloribus architecto placeat iste quisquam debitis
+                        iusto reiciendis rem.
+                    </div>
+                    <div class="l-kv__inner-btn">
+                        INSIDE Baboon CREW
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="l-team" id="section-1">
+            <div class="l-team__bg">
+                <picture>
+                    <source media="(max-width:768px)" srcset="img_pink_flowers.jpg">
+                    <img src="/src/images/img-team.jpg" alt="Baboon Crew">
+                </picture>
+            </div>
+            <div class="l-team__slogan">
+                from vision<br>to global<br>impact
+            </div>
+        </div>
+        <div class="l-about" id="section-2">
+            <div class="l-about-content">
+                <div class="l-about__ttl">[02] What about us</div>
+                <div class="l-about__desc">Lorem<br>ipsum<br>dolor<br>sit</div>
+            </div>
+            <div class="l-about-video">
+                <iframe id="aboutVideo" width="560" height="315" data-src="https://www.youtube.com/embed/wFU2hU7nE0k?enablejsapi=1&mute=1&playsinline=1&controls=0&rel=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen>                </iframe>
+            </div>
+        </div>
+        
+    </main>
+    <script src="/src/js/main/script.js"></script>
+</body>
+
+</html>

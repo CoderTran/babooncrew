@@ -1,0 +1,95 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Roboto Mono", "Hiragino Sans", "ヒラギノ角ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, "メイリオ", YuGothic, "游ゴシック", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary,
+div,
+span,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+tr,
+th,
+td,
+a,
+img,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+figure,
+dl,
+dt,
+dd,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+p,
+li,
+dl,
+table {
+  line-break: strict;
+  word-break: break-strict;
+  word-wrap: break-word;
+}
+
+img {
+  border: 0;
+  line-height: 1;
+  vertical-align: bottom;
+}
+
+a {
+  color: black;
+  background: transparent;
+  outline: 0 none;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--brand-primary);
+}

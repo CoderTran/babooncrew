@@ -1,0 +1,35 @@
+.u-grid-column1 {
+    grid-column: 2 / -1 !important;
+
+    @media screen and (max-width: 768px) {
+        grid-column: 1 / -2;
+    }
+}
+
+.u-grid-column2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+
+    @media screen and (max-width: 768px) {}
+}
+
+.image-grid1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+}
+
+.image-grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+
+    @media screen and (max-width: 768px) {
+
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+}

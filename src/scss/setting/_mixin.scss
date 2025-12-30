@@ -1,0 +1,116 @@
+@charset 'utf-8';
+@use 'sass:math';
+
+// ---------- Import ----------
+@use 'variable' as *;
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    clear: both;
+    display: block;
+  }
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin placeholder-color($color, $font-weight: 0) {
+  &::input-placeholder {
+    /* Edge */
+    color: $color;
+
+    @if $font-weight > 0 {
+      font-weight: $font-weight;
+    }
+  }
+
+  &:input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color;
+
+    @if $font-weight > 0 {
+      font-weight: $font-weight;
+    }
+  }
+
+  &::placeholder {
+    color: $color;
+
+    @if $font-weight > 0 {
+      font-weight: $font-weight;
+    }
+  }
+}
+
+@mixin outline {
+  outline: none;
+  box-shadow: 0 0 0 rem(1) var(--neutral-text-black);
+  border-radius: rem(1);
+}
+
+@function round-to-precision($number, $precision: 4) {
+  $power: math.pow(10, $precision);
+
+  @return math.div(math.round($number * $power), $power);
+}
+
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+@function rem($px-value) {
+  $value: round-to-precision(math.div(strip-unit($px-value), strip-unit($root-font-size)));
+
+  @return $value * 1rem;
+}
+
+@function vw($px-value, $viewport-type: $viewport-size-sp) {
+  $base-size: $viewport-type;
+  $value: round-to-precision(math.div(strip-unit($px-value), strip-unit($base-size)) * 100);
+
+  @return $value * 1vw;
+}
+
+@function percent($px-value, $base-px-value: $viewport-size-pc) {
+  $value: round-to-precision(math.div(strip-unit($px-value), strip-unit($base-px-value)) * 100);
+
+  @return $value * 1%;
+}
+
+// SP Breakpoint
+@mixin media-breakpoint-sp {
+  @media screen and (max-width: ($breakpoint-sp)) {
+    @content;
+  }
+}
+
+// PC Breakpoint
+@mixin media-breakpoint-pc {
+  @media screen and (min-width: ($breakpoint-pc)) {
+    @content;
+  }
+}
+
+// Between Breakpoints
+@mixin media-breakpoint-between($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+// Custom Media Query
+@mixin media-query-max($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+
+@mixin media-query-min($value) {
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}

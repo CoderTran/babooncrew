@@ -1,0 +1,29 @@
+@charset 'utf-8';
+
+// ---------- Import ----------
+@use '../setting' as *;
+
+@media screen and (min-width: 769px) {
+    .u-sp {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .u-pc {
+        display: none;
+    }
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.l-content{
+    max-width: 1280px;
+    padding: 0 16px;
+    margin: 0 auto;
+}

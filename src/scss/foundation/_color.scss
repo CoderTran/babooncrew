@@ -1,0 +1,117 @@
+// Define color variables in a map for easier management
+$colors: (
+  brand: (
+    primary: #d7092f,
+  ),
+  neutral: (
+    text-black: #333,
+    text-black-rgb: '51,51,51',
+    black: #000,
+    black-rgb: '0,0,0',
+    white: #fff,
+    white-rgb: '255,255,255',
+    purple: #4f1b77,
+    purple-2: #320653,
+    green: #107239,
+    green-2: #093a47b3,
+    blue: #3356b8,
+    blue-2: #113494,
+    red: #8b1113,
+    pink: #e74391,
+    gray-warm-rgb: '89,87,87',
+    orange: #cc472f,
+    orange-2: #ea6125,
+    brown-rgb: '49,41,31',
+    joshi: #e65069,
+    cream-rose: #f9f1ed,
+    nyanwan-brown: #583c32,
+    nyanwan-yellow: #ffdc00,
+    olive: '147, 131, 94,',
+  ),
+  gray: (
+    1: #f6f6f6,
+    2: #e9e9e9,
+    2-rgb: '233,233,233',
+    3: #c3c3c3,
+    4: #898989,
+    5: #656464,
+    light: #ebebeb,
+    text-gray: #595757,
+  ),
+  accent: (
+    gold: #84795d,
+  ),
+  gradiention: (
+    0: linear-gradient(to left, #8b1113 0%, #d7092f 100%),
+    1: linear-gradient(to right, #d6082e 0%, #f4585a 100%),
+    2: linear-gradient(to top, #8b1113 0%, #d7092f 100%),
+    3: linear-gradient(to right, #cf1336 0%, #b80d2d 100%),
+    4: linear-gradient(180deg, #d7092f 0%, #970507 100%),
+    gray: linear-gradient(to right, #e9e9e9 0%, #c3c3c3 100%),
+    gray-2: linear-gradient(90deg, #898989 0%, #b1b1b1 68.27%),
+    gray-3: linear-gradient(270deg, rgba(198, 178, 144, 30%) 0%, rgba(223, 214, 198, 30%) 100%),
+    green: linear-gradient(90deg, #4daf28 0%, #80d04b 68.27%),
+    gold: linear-gradient(180deg, #faf8f4 0%, #ece6dc 100%),
+    beige: linear-gradient(180deg, #fbf8ef 0%, #e9e3d5 100%),
+    beige-2: linear-gradient(to bottom, #faf9f6 0%, #eae2d7 100%),
+    red: linear-gradient(to right, #d7092f 0%, #8b1113 100%),
+    red-light: linear-gradient(180deg, #d7092f 0%, #970507 100%),
+    red-btn: linear-gradient(180deg, #f17884 0%, #c32638 100%),
+    rainbow: linear-gradient(90deg, #e74391 10%, #fed001 35%, #33b697 65%, rgba(1, 171, 235, 75%) 90%),
+    blue: linear-gradient(90deg, #1762cb 0%, #5babf1 100%),
+    black-to-transparent: linear-gradient(180deg, rgba(0, 0, 0, 70%) 0%, rgba(0, 0, 0, 0%) 100%),
+    black-to-top-transparent: linear-gradient(to top, rgba(0, 0, 0, 70%) 0%, rgba(0, 0, 0, 0%) 100%),
+    red-fade-bottom: linear-gradient(180deg, rgba(215, 9, 47, 0%) 0%, rgba(215, 9, 47, 20%) 100%),
+  ),
+  beige: (
+    1: #cdbead,
+    2: #e9e3d5,
+    3: #dbcfc2,
+    4: #fbf8ef,
+    5: #f8f3ec,
+    6: #d0e8f2,
+    rgb: '147,131,94',
+  ),
+  newrise: (
+    modern: #705e57,
+    classic: #a48666,
+    limited: #443e3b,
+    natural: #743c1b,
+  ),
+  bokulabseries: (
+    feel: #f5f3ed,
+    domo: #f5f5f5,
+    yell: #fdeee8,
+    niimo: #d3edfb,
+  ),
+  combination-housing: (
+    modern: #b68d8d,
+    modern-bg: #834b31,
+    cool: #678f9e,
+    cool-bg: #558090,
+    natural: #60845d,
+    natural-bg: #51784d,
+    point: #674a3c,
+    kv: #543f29,
+  ),
+  ciel-series: (
+    court: #c6c6c6,
+    court-bg: #e6e6e6,
+    patio: #bcb296,
+    garage: #000,
+    garage-bg: #333,
+    oner: #093b07,
+  ),
+);
+
+:root {
+  @each $group, $map in $colors {
+    @each $key, $value in $map {
+      @if $key == 0 {
+        --#{"" + $group}: #{$value};
+      } @else {
+        --#{"" + $group}-#{"" + $key}: #{$value};
+      }
+    }
+  }
+}

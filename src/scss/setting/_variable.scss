@@ -1,0 +1,34 @@
+$root-font-size: 10px; // Default root font size
+$viewport-size-sp: 375px; // Default viewport size for mobile
+$viewport-size-pc: 1920px; // Default viewport size for desktop
+
+// Font family
+$base-font-sans: 'Noto Sans JP', 'メイリオ', 'Meiryo', sans-serif;
+$base-font-marcellus: 'Marcellus SC', sans-serif;
+$base-font-cardo: 'Cardo', sans-serif;
+$base-font-montserrat: 'Montserrat', sans-serif;
+$base-font-hiragino: 'Hiragino Kaku Gothic Pro', sans-serif;
+
+// Line height
+$base-line-height: 1.57;
+
+// Font weight
+$fw-4: 400; // Regular
+$fw-5: 500; // Medium
+$fw-6: 600; // Semi Bold
+$fw-7: 700; // Bold
+
+// Breakpoint
+$max-width: 1250;
+$padding-lr: 15;
+$body-min-width: 0;
+
+// Scrollbar
+$scrollbar-width: 6px;
+$scrollbar-width-max: 8px;
+$scrollbar-thumb-border-radius: 9999px;
+
+// Breakpoint
+$breakpoint-pc: 960px;
+$breakpoint-sp: $breakpoint-pc - 1px;
+$breakpoint-header: 1100px;

@@ -1,0 +1,124 @@
+@charset 'utf-8';
+
+// ---------- Import ----------
+@use '../setting' as *;
+
+#vanta-bg {
+    width: 100%;
+    height: 100vh;
+}
+
+.l-kv {
+    position: relative;
+
+    &__bg {
+        position: relative;
+        z-index: -1;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include media-breakpoint-sp {
+            grid-template-columns: 1fr;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__inner {
+        text-align: center;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .l-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-slogan {
+            margin-bottom: 10px;
+            font-size: 20px;
+            padding: 20px;
+            background-color: rgba(var(--neutral-black-rgb), 0.8);
+            transform: skew(-25deg, 0);
+            color: var(--neutral-white);
+        }
+
+        &-btn {
+            background-color: var(--gray-3);
+            padding: 8px 20px;
+            max-width: fit-content;
+            cursor: pointer;
+            transition: 0.3s all;
+
+            &:hover {
+                color: var(--neutral-white);
+                background-color: var(--neutral-black);
+                transform: skew(-25deg, 0);
+            }
+        }
+    }
+}
+
+.l-team{
+    position: relative;
+    height: 100vh;
+    padding-top: 20px;
+    &__slogan{
+        text-align: center;
+        color: var(--neutral-white);
+        font-size: 25px;
+        position: sticky;
+        z-index: 1;
+        top: 70px;
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        text-transform: uppercase;
+        font-size: 80px;
+    }
+    &__bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        overflow: hidden;
+
+        img{
+        }
+    }
+
+}
+
+.l-about{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &-content{
+        padding: 80px 16px;
+    }
+    &__ttl{
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+    &__desc{
+        font-size: 70px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &-video{
+        iframe{
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+    }
+
+}

@@ -1,0 +1,40 @@
+.u-left {
+     display: flex;
+     justify-content: flex-start; 
+}
+.u-title-left {
+     transform: translate(-8vw, 5vw);
+}
+.u-title-left_prize {
+     transform: translate(14vw, -1vw);
+}
+.u-title-left_winner {
+     transform: translate(14vw, -1vw);
+}
+
+.u-right {
+     display: flex;
+     justify-content: flex-end; 
+}
+.u-title-right {
+     transform: translate(12vw, 4vw);
+}
+.u-title-center {
+     text-align: center;
+}
+
+
+
+.image-grid2 {
+     grid-template-columns: repeat(2, 1fr) !important;
+     gap: 0px !important;
+     
+}
+
+.u-item-grid {
+     order: 99;
+     ;
+     align-items: center;
+     gap: 20px !important;
+}
+

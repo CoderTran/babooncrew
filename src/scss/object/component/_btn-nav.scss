@@ -1,0 +1,80 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    flex: 1;
+    padding: 42px;
+    border: none;
+    transition: background-color 0.3s, background-image 0.3s;
+
+    &.active {
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &#btn1 {
+      background-image: url(../asset/images/btn_taikai_flow-nonactive.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &#btn1.active {
+      background-image: url(../asset/images/btn_taikai_flow-active.png);
+    }
+
+    &#btn2 {
+      background-image: url(../asset/images/btn_taikai_schedule-nonactive.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &#btn2.active {
+      background-image: url(../asset/images/btn_taikai_schedule-active.png);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    button{
+         padding: 52px; 
+    &#btn1 {
+      background-image: url(../asset/images_sp/btn_taikai_flow-nonactive_sp.png);
+    }
+
+    &#btn1.active {
+      background-image: url(../asset/images_sp/btn_taikai_flow-active_sp.png);
+    }
+
+    &#btn2 {
+      background-image: url(../asset/images_sp/btn_taikai_schedule-nonactive_sp.png);
+    }
+
+    &#btn2.active {
+      background-image: url(../asset/images_sp/btn_taikai_schedule-active_sp.png);
+    }
+  }
+  }
+}
+
+
+
+.image-container-rank {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-1%);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
